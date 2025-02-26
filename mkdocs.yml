@@ -1,0 +1,39 @@
+site_name: luantber
+# site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - content.code.copy
+
+plugins:
+  - search
+  - tags:
+      listings: true
+  - blog:
+      blog_dir: . 
+      archive: false
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/luantber/
+
+nav:
+  - Blog: index.md
+  - About me: about.md
+  - Tags: tags.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
