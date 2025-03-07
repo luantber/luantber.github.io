@@ -2,6 +2,10 @@ site_name: luantber
 # site_url: https://mydomain.org/mysite
 theme:
   name: material
+  language: es
+  palette:
+    primary: indigo
+
   features:
     - navigation.tabs
     - content.code.copy

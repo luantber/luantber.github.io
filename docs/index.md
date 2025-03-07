@@ -5,5 +5,3 @@ hide:
 ---
 
 # Blog
-
-Welcome to the blog
