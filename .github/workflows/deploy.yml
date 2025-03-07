@@ -5,7 +5,7 @@ on:
     branches: [ main ]  # replace 'main' with your default branch if different
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,5 +29,19 @@ jobs:
         with:
           path: site
 
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
