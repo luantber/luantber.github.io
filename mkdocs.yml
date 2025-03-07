@@ -17,7 +17,7 @@ plugins:
   - blog:
       blog_dir: . 
       archive: false
-
+      post_date_format: medium
 extra:
   social:
     - icon: fontawesome/brands/linkedin
